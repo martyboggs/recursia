@@ -1,6 +1,13 @@
 // Extended Daniel Shiffman's natureofcode example to paper.js
 // https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/box2d-html5
 
+WebFont.load({
+	google: {
+		families: ['Oxygen Mono', 'Open Sans:300']
+	}
+});
+
+
 var Box = function (x, y, color) {
 	this.w = getRandomInt(5, 20);
 	this.h = getRandomInt(14, 20);
