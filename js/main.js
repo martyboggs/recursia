@@ -468,6 +468,10 @@ var EnemyFly = function () {
 		this.paperShape.segments[i].handleOut = [30, -10];
 	}
 
+	this.paperShape.sendToBack();
+	// this.paperShape.bringToFront();
+
+
 	this.paperBite = new Shape.Rectangle({size: [100, 100]});
 	this.paperBite.position = this.paperShape.segments[0].point;
 	// this.center = new Shape.Circle({
@@ -1446,7 +1450,7 @@ GamePlay.prototype = {
 				if (event.count % 1000 === 0) {
 					if (enemies.length < 6) {
 						enemyFlies.push(new EnemyFly());
-						enemyFlies[enemyFlies.length - 1].paperShape.insertBelow(jim.paperShape);
+						// enemyFlies[enemyFlies.length - 1].paperShape.insertBelow(jim.paperShape);
 					}
 				}
 
@@ -1490,7 +1494,7 @@ GamePlay.prototype = {
 				if (event.count % 1000 === 0) {
 					if (enemies.length < 6) { // whales
 						enemyFlies.push(new EnemyFly());
-						enemyFlies[enemyFlies.length - 1].paperShape.insertBelow(jim.paperShape);
+						// enemyFlies[enemyFlies.length - 1].paperShape.insertBelow(jim.paperShape);
 					}
 				}
 				if (event.count % 2200 === 0) { // cirling enemies
